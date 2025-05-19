@@ -7,7 +7,7 @@ altura = float(input("Ahora ingresa tu alura en metros: "))
 
 imc = calc.calcular_IMC(peso, altura)
 
-print(f"Tu IMC es de: {imc}")
+print(f"Tu IMC es de: {imc:.2f}")
 
 print("Segun tus datos vos tenes...")
 if imc < 16:

@@ -46,4 +46,4 @@ else:
 
 tmbaf = calc.calcular_calorias_en_actividad(tmb, nivel_actividad)
 
-print(f"\nTu TMB según Actvidad Física es de: {tmbaf} calorias")
+print(f"\nTu TMB según Actvidad Física es de: {tmbaf:.2f} calorias")

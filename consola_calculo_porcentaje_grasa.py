@@ -18,7 +18,7 @@ else:
 imc = calc.calcular_IMC(peso, altura)
 
 PGC = calc.calcular_porcentaje_grasa(imc, edad, genero_valor)
-print(f"\nTu PGC es de: {PGC}")
+print(f"\nTu PGC es de: {PGC:.2f}%")
 
 if genero == 1:
     print(f"\n{'Rango de edad':<15}{'%GC Hombres':<20}")

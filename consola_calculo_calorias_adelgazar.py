@@ -20,4 +20,4 @@ tmb = calc.caclular_calorias_en_reposo(peso, altura, edad, genero_valor)
 
 cpa = calc.consumo_calorias_recomendado_para_adelgazar(tmb)
 
-print(f"Para adelgazar es recomendado que consumas entre: {cpa[0]} y {cpa[1]} calorías al día.")
+print(f"Para adelgazar es recomendado que consumas entre: {cpa[0]:.2f} y {cpa[1]:.2f} calorías al día.")

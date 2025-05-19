@@ -17,4 +17,4 @@ else:
 
 tmb = calc.caclular_calorias_en_reposo(peso, altura, edad, genero_valor)
 
-print(f"Tu TMB es de: {tmb} calorias")
+print(f"\nTu TMB es de: {tmb:.2f} calorias")

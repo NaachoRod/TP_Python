@@ -2,15 +2,22 @@
 
 
 def calcular_IMC(peso, altura):
-    imc = peso / altura**2
+    if peso <= 0 or altura <= 0:
+        raise Exception("El Peso o Altura no pueden ser 0 o menor")
+    else:
+        imc = peso / altura**2
     return imc
     
 
 def calcular_porcentaje_grasa(imc, edad, genero):
+    if edad <= 0:
+        raise Exception("La Edad no pueden ser 0 o menor")
     PGC = 1.2 * imc + 0.23 * edad -5.4 - genero
     return PGC
 
 def caclular_calorias_en_reposo(peso, altura, edad, genero):
+    if peso <= 0 or altura <= 0 or edad <= 0:
+        raise Exception("El Peso, Altura o Edad no pueden ser 0 o menor")
     tmb = 10 * peso + 6.25 * altura - 5 * edad + genero
     return tmb
 
