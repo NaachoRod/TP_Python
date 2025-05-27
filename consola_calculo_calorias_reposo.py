@@ -3,18 +3,20 @@ import calculadora_indices as calc
 print("Vamos a calcular tu Tasa Metabólica Basal")
 print("________________________________________________\n")
 
-peso = float(input("Ingresá tu peso en kg: "))
-altura = int(input("Ingresa tu alura en centimetros (cm): "))
-edad = int(input("Ingresa tu edad en años: "))
-genero = int(input("Ahora necesitamos tu genero\n Para genero masculino ingresa 1\n Para genero femenino ingresa 2: "))
-while genero != 1 and genero != 2:
-    genero = int(input("Número incorrecto\n Para genero masculino ingresa 1\n Para genero femenino ingresa 2: "))
+try:
+    peso = float(input("Ingresá tu peso en kg: "))
+    altura = int(input("Ingresá tu altura en centímetros (cm): "))
+    edad = int(input("Ingresá tu edad en años: "))
 
-if genero == 1:
-    genero_valor = 5 
-else:
-    genero_valor = -161
+    genero = int(input("Ahora necesitamos tu género\n Para género masculino ingresá 1\n Para género femenino ingresá 2: "))
+    while genero != 1 and genero != 2:
+        genero = int(input("Número incorrecto\n Para género masculino ingresá 1\n Para género femenino ingresá 2: "))
 
-tmb = calc.caclular_calorias_en_reposo(peso, altura, edad, genero_valor)
+    genero_valor = 5 if genero == 1 else -161
 
-print(f"\nTu TMB es de: {tmb:.2f} calorias")
+    tmb = calc.caclular_calorias_en_reposo(peso, altura, edad, genero_valor)
+
+    print(f"\nTu TMB es de: {tmb:.2f} calorías")
+
+except Exception as e:
+    print(f"\nError inesperado: {e}")
