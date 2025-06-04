@@ -40,7 +40,7 @@ try:
     elif opcion == 3:
         nivel_actividad = 1.55
     elif opcion == 4:
-        nivel_actividad = 1.72
+        nivel_actividad = 1.725
     else:
         nivel_actividad = 1.9
 
